@@ -9,7 +9,7 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=database
     volumes:
-      - db-data:/var/lib/mysql:rw
+      - database-data:/var/lib/mysql:rw
     ports:
       - "3306:3306"
 
@@ -25,4 +25,4 @@ services:
       - "443:443"
 
 volumes:
-  db-data:
+  database-data:

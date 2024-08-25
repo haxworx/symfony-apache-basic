@@ -19,5 +19,5 @@ RUN set -eux; \
     apt-get update && apt-get -y upgrade; \
     mkdir /etc/apache2/ssl && cd /etc/apache2/ssl; \
     apt-get -y install openssl; \
-    openssl req -x509 -nodes -new -sha256 -days 1024 -newkey rsa:2048 -keyout localhost.key -out localhost.pem -subj "/C=FR/CN=localhost"; \
+    openssl req -x509 -nodes -new -sha256 -days 1024 -newkey rsa:2048 -keyout localhost.key -out localhost.pem -subj "/C=GB/CN=localhost"; \
     openssl x509 -outform pem -in localhost.pem -out localhost.crt;
